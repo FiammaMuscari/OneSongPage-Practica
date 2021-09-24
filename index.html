@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="/img/video-player.png">
+    <title>One Song Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/img/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFICATIONS</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONNECT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>BABY <br> I'M <br>JEALOUS</h1>
+            </div>
+            <div class="right-col">
+                <P>Presiona y Escucha</P>
+                <img src="/img/play.png" id="icon">
+            </div>
+        </div>
+
+    </div>
+    <audio id="mySong">
+        <source src="img/Bebe Rexha & Doja Cat - Baby, I'm Jealous Español.mp3" type="audio/mp3">
+    </audio>
+
+    <!--enlazar la canción-->
+<script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function() {
+        if (mySong.paused){
+            mySong.play();
+            icon.src = "/img/pause.png";
+        } else {
+            mySong.pause();
+            icon.src = "/img/play.png";
+        }
+    }
+
+</script>
+</body>
+</html>
